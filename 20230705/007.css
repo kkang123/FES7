@@ -1,0 +1,35 @@
+#title{
+    /* 밑줄 */
+    text-decoration: underline;
+}
+
+.my{
+    color: slateblue;
+}
+
+.my + p{
+    color: brown;
+}
+
+/* body {
+    background-color: aqua;
+} */
+
+/* 자손 선택자 */
+/* .sect2 strong{
+    background-color: yellowgreen;
+} */
+
+/* 직계자손 > */
+.sect2 > strong{
+    background-color: yellowgreen;
+}
+
+.sect2 > * {
+    border: 2px solid red;
+}
+
+.my + p,
+.sect3 p {
+    background-color: beige;
+}
