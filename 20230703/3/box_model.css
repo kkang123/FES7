@@ -1,0 +1,16 @@
+.box1 {
+    background-color : skyblue;
+    width: 100px;
+    height: 100px;
+    /* border: 20px solid black; */
+    border: 5px solid black;
+    padding: 20px; /* 테두리와 내용물 사이의 빈틈 */
+    margin: 20px; /* 상자가 두꺼운 옷을 입은 느낌 */
+}
+
+.box2 {
+    background-color : violet;
+    width: 100px;
+    height: 100px;
+    border: 5px solid purple;
+}
