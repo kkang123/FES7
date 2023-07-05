@@ -1,0 +1,13 @@
+p {
+	font-size : 30px; /* 글씨 크기 : 모니터 사이즈의 픽셀 단위 */
+}
+
+.big-font {  
+		font-size : 40px;
+}
+
+.small-font {
+		font-size : 15px;
+}
+
+/* .은 클래스 표현 */

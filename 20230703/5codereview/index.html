@@ -1,0 +1,71 @@
+<!DOCTYPE html> # 크롬은 안 써도되는데 항상 쓰는 코드
+<html> 이것도 굳이 안써도 동작 가능하지만 항상 쓰는걸로
+
+	head는 컨텐츠를 보조하는 내용
+	body는 컨텐츠 내용
+  <head> 
+    <meta charset="UTF-8"> 이 문서에 한글이 있다는 뜻
+    <title>김멋사의 이력서</title> 문서의 제목
+    <link rel="stylesheet" href="codelion.css"> 문서를 꾸며주는 외부 css파일
+  </head>
+
+  바디태그
+
+  <body>
+    <div class="mainbox"> 테두리 그리고 쉐도우 적용
+		<div class="title-box"> 김멋사와 name-text를 묶어서 우측 정렬하기 위해서 묶었다.
+			<h1>김멋사</h1> 가장 크게 표현해라
+
+			p태그는 일반적인 내용 작성
+			<p class="name-text">HTML/CSS 개발자</p>
+		</div>
+
+	  <section> html 요소를 꾸미기 위해 묶음
+		<h2>ABOUT ME</h2>
+		<p class="about-me-text"> Lorem은 의미 없는 문장
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sint nemo facere nostrum ad rem veritatis? Voluptatum natus dignissimos autem perspiciatis.
+		</p>
+	  </section>
+
+	  <section>
+		<h2>EXPERIENCE</h2> float으로 떠다니는 문장을 float랩으로 묶어준다.
+
+
+		<div class="float-wrap">
+			<p class="title-text">Awesome Programming Company</p>
+			<p class="year-text">2020 - Now</p>
+		</div>
+		<p class="desc-text">Front-End Web Developer</p> 
+		<!-- 좌우 방법 때문에 글자가 겹침 -->
+		<p class="desc-subtext">HTML/CSS,JS,React,...</p>
+<!--  -->
+		<div class="float-wrap">
+			<p class="title-text">Ministry of Health</p>
+			<p class="year-text">2015 - 2018</p>
+		</div>
+		  <p class="desc-text">UI/UX Designer</p>
+		  <p class="desc-subtext">Web design</p>
+	<!--  -->
+		  <div class="float-wrap">
+			<p class="title-text">Freelance Work</p>
+			<p class="year-text">2011 - 2015</p>
+		  </div>
+		  <p class="desc-text">Graphic Designer</p>
+		  <p class="desc-subtext">Graphic Design, Editorial Design</p>
+
+	  </section>
+	  
+		<div class="sns-wrap">
+			<a href="http://facebook.com"><img class="sns-ing" src="images/facebook.png"></a>
+			<a href="http://facebook.com"><img class="sns-ing" src="images/twitter.png"></a>
+			<a href="http://facebook.com"><img class="sns-ing" src="images/linked-in.png"></a>
+			<a href="http://facebook.com"><img class="sns-ing" src="images/instagram.png"></a>
+		</div>
+
+	  </div>
+
+    <footer> 저작권에 대한 간단한 표시만 해둠
+      <p>Copyright CODE LION All rights reserved.</p>
+    </footer>
+  </body>
+</html>
