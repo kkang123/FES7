@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p태그</title>
+    <style>
+        .br-span{
+            display: block;
+            height: 20px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <span class="br-span">lorem</span>
+    <span>lorem</span>
+    <span>span은 인라인(inline)요소이고 줄바꿈이 안된다.</span>
+    <br>
+
+
+    <div>123</div>
+    <div>123</div>
+    <div>div는 span과 다르게 블럭처리로 줄 바꿈이 된다.</div>
+    <br>
+
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. <span class="br-span"> br을 두 번하면 안되고 css로 여백을 늘려줘야한다.</span> eveniet deserunt beatae, vel, maxime culpa, minima animi praesentium quidem cumque labore provident delectus veritatis officia mollitia officiis in fugiat est?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> In excepturi placeat aliquid sunt!<br> Quos cupiditate reiciendis aperiam cum necessitatibus ipsum, sunt maiores, nisi, numquam aliquid amet voluptates sequi ullam laborum?
+    </p>
+    
+    
+
+    <p><code>push() 가로폭이 똑같고 여백이 같다</code>이 코드는 어떤 목적으로 사용.</p>
+    <p>push() 가로폭이 똑같고 여백이 같다 이 코드는 어떤 목적으로 사용.</p>
+    <p><code>가독성, 코드라는 것을 알려주고 가독성 등등</code> 목적으로 사용.</p>
+
+
+
+    <pre>
+        안녕하세요
+                반갑습니다.
+    코드를 보여줄 때 pre을 사용한다.
+    코드 작성 시 특수 코드 사용해야한다.
+    &lt; ~~~~ &gt;
+    &lt; !DOCTYPE html &gt;
+    </pre>
+
+    <p>
+        <Strong>Strong</Strong>이다
+    </p>
+
+    <p>
+        <b>예전에는 b태그 i태그를 사용했지만 이제는 CSS 등등을 사용하기 때문에 이제는 사용하지않는다.</b>
+    </p>
+
+    <p>
+        <em>
+            기울림꼴을 표현 : 강조, 강한 어조 / 텍스트의 강세를 나타냄 /음성 강조를 하는 것처럼 문자의 의미를 변경하는데 사용
+        </em>
+    </p>
+
+    <p>
+        <i>
+            이것 또한 기울림꼴 표현 / 외국어, 등장인물의 생각 등 일반적인 산문에서 벗어난 경우 사용
+        </i>
+    </p>
+
+    <p>
+        <q>
+            짧은 인용문 나타냄 <br>
+            줄 바꿈 없이 짧은 경우
+        </q>
+    </p>
+
+    <figure>
+
+        <blockquote>
+            <cite>어린왕자 여우의 말 중(cite는 저작물의 출처를 표기할 때 사용하며, 제목을 반드시 포함해야 한다.)</cite> 긴 인용문 나타냄
+        </blockquote>
+
+        <address>주소~</address>
+    </figure>
+
+    <p>
+        <abbr>CSS</abbr> (Cascading Style Sheets)
+        <abbr>HTML</abbr> (HyperText Markup Language)
+    </p>
+
+    <p>
+        <abbr title="Cascading Style Sheets">CSS</abbr>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+    </p>
+
+    <p><var>a<sup>2</sup></var></p>
+    <p>English: 5<sup>th</sup></p>
+
+    CO<sub>2</sub>
+    <var>x<sub>1</sub></var>
+
+    <p>맥 브라우저 강력 새로고침 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></p>
+</body>
+</html>
