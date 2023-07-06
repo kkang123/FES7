@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+<style>
+    a:link{
+        color: skyblue;
+
+        /* 하이퍼텍스트 밑줄 제거 */
+        text-decoration: none;
+
+        /* 변화가 천천히 보이겠끔하는 것 */
+        transition: all 0.3s;
+    }
+
+    /* 방문시 색깔 (기존 보라색) */
+    a:visited{
+        color: greenyellow;
+    }
+
+    /* 방문 기록이 아직 없는 사이트(기존의 색 빨강색) */
+    a:active{
+        background-color: aqua;
+
+    }
+
+    /* 마우스 갖다대면 글자크기 커짐 */
+    a:focus{
+        background-color: salmon;
+        font-size: 0.5em
+    }
+
+    a:hover {
+      font-size: 2em;
+    }
+
+</style>
+</head>
+
+
+<body>
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.samsung.com">삼성</a>
+    <a href="djflkajdklf">???</a>
+</body>
+</html>

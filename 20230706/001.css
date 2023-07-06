@@ -1,0 +1,60 @@
+/* import 구글 폰트 삽입 */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+/* font-face 눈누 폰트 삽입 */
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 상대경로 */
+@font-face {
+    font-family: 'neon';
+    src: url('./font/Pretendard-Bold.woff') format('truetype');
+}
+
+.font-pc {
+    /* font-family: 'SDSamliphopangche_Outline'; */
+    font-family: neon;
+}
+
+body{
+    /* background-color:  skyblue; */
+    color: red;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+h1 {
+    /* color: rgb(26, 215, 36); */
+    color: inherit;
+    /* border: 2px solid #ddd; */
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+
+strong{
+    /* border: 1px solid currentColor; */
+    /* border: inherit; */
+    border-bottom: 5px solid currentColor;
+}
+
+/* inherit은 color값들은 처음부터 상속되지만 border나 그 외의 값들은 부모한테만 상속받음 */
+
+/* button {
+    color: inherit;
+    border: inherit;
+} */
+
+h2{
+    color: blue;
+    /* font-family: 'Pretendard-Regular', Verdana, sans-serif; */
+     font-family: 'SDSamliphopangche_Outline';
+}
+
+/* 대비율 때문에 크롬에서 바로 변경 안될 수 있음  */
