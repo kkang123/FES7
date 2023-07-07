@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background</title>
+  <style>
+    body {
+      height: 1000px;
+    }
+
+    div {
+      font-size: 30px;
+      /* border: 40px dsotted pink; */
+      padding: 40px;
+      /* background: url(https://img.freepik.com/free-vector/watercolor-oil-painting-background_52683-107025.jpg?w=2000); */
+      /* background: scroll url(https://img.freepik.com/free-vector/watercolor-oil-painting-background_52683-107025.jpg?w=2000); */
+    
+      /* 사진은 고정하고 스크롤 따로 움직임 */
+      /* background-attachment: fixed; */
+      /* background-attachment: scroll; */
+      /* background-color: skyblue; */
+      
+      background-attachment: scroll;
+
+ /* padding box는 패딩까지 포함, border는 포함, contentbox는 컨텐츠까지 */
+      /* background-clip: content-box; */
+      background-image: url(https://img.freepik.com/free-vector/watercolor-oil-painting-background_52683-107025.jpg?w=2000);
+    
+      /* background-origin: border-box;
+      background-color: hotpink;
+      background-position: 200px 0; */
+
+      
+      /* 패턴 적용 x, y, 전체 이렇게 먹일 수 있다 */
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic illum exercitationem, magnam enim quidem illo sint
+    totam ipsam voluptates expedita cum repellendus eum quaerat aspernatur accusamus. Totam nesciunt inventore ipsam.
+    Hic dolor laudantium veniam iste totam alias in possimus rerum ad eveniet recusandae minus tenetur debitis quia
+    cupiditate nemo velit nam delectus, tempore, provident perferendis optio nulla doloremque voluptates. Ducimus.
+    Deserunt hic perferendis blanditiis. Fuga quis autem ex, amet possimus quaerat similique assumenda dolores dolore
+    omnis odit impedit itaque voluptatem aperiam, dignissimos aliquam inventore. Sit temporibus blanditiis eveniet ut
+    facilis.
+  </div>
+</body>
+
+</html>
+
+<!-- overflow는 사진 안에 스크롤을 위해 작성하는 것   
+hidden은 튀어나온 내용을 숨기고  
+scroll은 박스 안에 스크롤 생성  
+auto는 긴 내용은 스크롤, 짧은 내용은 그냥 둬서 알아서 설정하는 역할
+-->
