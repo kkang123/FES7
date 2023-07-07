@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 우선순위</title>
+<style>
+
+    .c1 {
+        color: red;
+        background-color: aqua;
+    }
+
+    p {
+        color : blue;
+        font-size : 20px;
+    }
+
+    #id1{
+        color: violet;
+    }
+
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+    <p class="c1" id="id1" style="color: green;">선택자 우선순위</p>
+    <p class="c1" id="id1">선택자 우선순위</p>
+    <p >선택자 우선순위</p>
+</body>
+</html>
+
+<!-- 우선자 순위는
+1. 인라인
+2. 아이디 #
+3. 클래스 ., 가상 클래스 , 속성 선택자
+4. 태그, 가상요소 선택자 -->

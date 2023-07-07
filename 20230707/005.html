@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        /* div{
+            background-color: skyblue;
+            1. width: 100px;
+            width: max-content;
+
+            border: 10px solid royalblue;
+
+            테두리를 포함해서100으로 계산함(width80d에 margin 10이면)
+            box-sizing: border-box;
+        } */
+
+      .box1 {
+      background-color: skyblue;
+      border: 10px solid royalblue;
+      width: 100%;
+      height: 200px;
+
+      box-sizing: border-box;
+
+      padding: 20px 0;
+      margin: 40px;
+      /* padding: 20px; */
+      /* padding: 20px 10px 30px 40px; */
+      /* padding-top: 20px;
+      padding-right: 10px;
+      padding-bottom: 20px;
+      padding-left: 10px; */
+
+    }
+
+    .box2 {
+      background-color: gold;
+      height: 50%;
+    }
+
+
+    .box3 {
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      margin: 0px auto;
+      /* margin: auto 0 auto auto; */
+    }
+    </style>
+</head>
+
+
+<body>
+    <!-- <div>
+        box
+    </div> -->
+
+
+    <div class="box1">
+        box1
+        <div class="box2">
+          box2
+        </div>
+      </div>
+
+      <div class="box3">
+        box3
+      </div>
+</body>
+</html>
+
+
+<!-- 테두리를 포함해서100으로 계산함(width80d에 margin 10이면 100이지만 저 명령어를 쓰면 width 값에 맞춰서 자연스럽게 border 값을 정해준다. 합쳐서 계산한다.)
+
+- width = 콘텐츠 너비 + border + padding
+
+box-sizing: border-box; -->

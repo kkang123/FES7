@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width size</title>
+  <style>
+
+    /* 백그라운 색깔 지정 */
+    p {
+      background: pink;
+    }
+
+    /* 너가 갖고있는 최대 컨텐츠를 가져간다. 그래서 화면 밖으로 넘어감 */
+    .max-content {
+      width: max-content;
+    }
+
+    /* 가지고 있는 콘텐츠를 최소의 컨텐츠로 압축 하기 위해 줄바꿈해서 표현 최소 단위는 단어 하나씩(띄어쓰기 기준으로 줄바꿈 먹음) */
+    .min-content {
+      width: min-content;
+    }
+
+    /* 알아서 맞춰서 포함?  */
+    .fit-content {
+      width: fit-content;
+    }
+
+    .parent {
+      width: 500px;
+      background: gray;
+    }
+
+    .parent p {
+      width: 200px;
+      margin: auto;
+    }
+
+    .parent p {
+      width: 200px;
+      margin: auto 0 auto auto;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    basic) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni ipsa
+    eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+
+  </p>
+  <p class="max-content">
+    max) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni ipsa
+    eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+
+  </p>
+  <p class="min-content">
+    min) Lorem ipsum dolor sit
+  </p>
+
+  <p class="min-content">
+    한글로 작성하면요?
+  </p>
+  
+  <p class="fit-content">
+    fit1) Lorem ipsum dolor sit
+  </p>
+
+  <p class="fit-content">
+    fit2) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni ipsa
+    eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+  </p>
+
+  <div class="parent">
+    <p>Lorem ipsum dolor sit</p>
+  </div>
+
+</body>
+
+</html>
