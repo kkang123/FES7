@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피그마 실습해보기</title>
+    <style>
+        div{
+            margin: 10%;
+            width: 288px;
+            height: 348px;
+
+            border-radius: 8px;
+            background: #fff;
+
+            box-shadow: 2px 2px 8px 0px rgba(0,0,0, 0.10);
+            /* 이미지 파일인 자식요소에 border-radius 적용 */
+            overflow: hidden;
+        }
+
+        img {
+            width: 288px;
+            height: 196px;
+            flex-shrink: 0;
+            
+        }
+
+        .txt1 {
+            display: flex;
+            width: 200px;
+            height: 19px;
+            flex-direction: column;
+            flex-shrink: 0;
+
+            color: var(--text-1, #29363D);
+            font-family: Pretendard;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            padding-left: 10px;
+        }
+
+        .txt2 {
+            display: flex;
+            width: 256px;
+            height: 40px;
+            flex-direction: column;
+            flex-shrink: 0;
+
+            color: var(--text-2, #5A6A72);
+            font-family: Pretendard;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+
+            overflow: hidden;
+            padding-left: 10px;
+        }
+
+        .txt3{
+            display: flex;
+            width: 34px;
+            height: 10px;
+            flex-direction: column;
+            flex-shrink: 0;
+
+            color: var(--text-1, #29363D);
+            font-family: Pretendard;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration-line: underline;
+
+            
+        }
+
+        button{
+            width: 70px;
+            height: 24px;
+            flex-shrink: 0;
+
+            /* padding-left: 10px; */
+        }
+    </style>
+</head>
+
+
+<body>
+    
+<div>
+    <img src="../images/unsplash_lB9ylP8e9Sg.png" alt="실습이미지">
+    <p class="txt1">그것을 피가 청춘을 것이다</p>
+    <p class="txt2">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다.얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+    <button>
+        <p class="txt3">Read</p></button>
+
+</div>
+</body>
+</html>
