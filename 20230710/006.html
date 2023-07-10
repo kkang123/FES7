@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .box1,
+        .box2,
+        .box3{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: royalblue;
+
+            /* 포지션 relative를 먹이면 z-index값이 먹는다. */
+            position: relative;
+            z-index: 3;
+        }
+
+        .box2{
+            background-color: slateblue;
+            /* position: inherit; */
+            position: absolute;
+            /* position: relative; */
+            
+            /* bc 겹침 top -50을하면 a와 겹친다. */
+            /* position: relative; */
+
+            /* position: fixed; */
+
+            top: 50px;
+            left: 50px;
+            /* z-index: 2; */
+            z-index: -1;
+        }
+
+        .box3{
+            background-color: salmon;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 1;
+        }
+
+        .parent{
+            background-color: aqua;
+            /* 부모에게 z-index를 주는것은 자식에게 영향을 주지 않지만 자식은 z-index로 부모 뒤로 이동가능하다. */
+            z-index: 10;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="parent">
+
+        <div class="box1">a</div>
+        <div class="box2">b</div>
+        <div class="box3">c</div>
+    </div>
+</body>
+</html>
+
+
+<!-- parent는 box1에 값에만 영향 받아서 떠있는데 -->
+<!-- 하지만 box2에 position: relative;을 넣어주면 box2까지 적용한다. -->
