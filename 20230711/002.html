@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        img{
+            /* 이미지 위치 설정 left right 중 선택 가능 */
+            float: right;
+        }
+
+        span{
+            float: left;
+            background-color: skyblue;
+            margin: 20px;
+        }
+
+        p{
+            /* 취소하다라는 개념으로 float : left/right이랑 짝꿍개념이다. 
+            float 속성 사용 후 이후 다른 요소에 적용 되는 것들은 탈출 시키기 위한 명령어 */
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <span>
+        안녕하세요    
+    </span>
+        <img src="http://placehold.it/200x150" alt="">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni nobis minima. Reprehenderit nam dolor
+            minima qui repudiandae deleniti, eius, et placeat illum optio omnis cum quaerat id? Quos, eum!
+            Recusandae ducimus asperiores, nemo dolorem accusamus earum. Repellendus iure aliquid dignissimos maxime quisquam
+            possimus doloremque corrupti dolores obcaecati temporibus delectus non assumenda a earum quaerat, maiores at
+            inventore natus qui!
+            Placeat architecto iure incidunt harum facere eum alias ipsum nemo culpa earum modi exercitationem, laborum eveniet
+            neque, optio eos natus saepe voluptatem accusamus necessitatibus aliquid molestias quod nostrum recusandae?
+            Suscipit!
+        </p>
+
+
+
+</body>
+
+</html>
