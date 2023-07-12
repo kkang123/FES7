@@ -6,11 +6,22 @@
 }
 
 @font-face {
-  font-family: 'Pretendard-Bold';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
-    format('woff');
-  font-weight: 700;
-  font-style: normal;
+font-family: 'Pretendard-Bold';
+src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
+format('woff');
+font-weight: 700;
+font-style: normal;
+}
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
 }
 
 body,
