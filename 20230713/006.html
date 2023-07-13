@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 버튼 만들기</title>
+        <style>
+            /* font-style */
+            @font-face {
+                font-family: 'Pretendard-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            button{
+                width: 88px;
+                height: 32px;
+                border-radius:  0px;
+            }
+
+            /* btn1 */
+            .btn1 {
+                border: 1px solid #1A202C;
+
+                font-size: 12px;
+                line-height: 14.4px;
+                color: #CBD5DF;
+                font-family: 'Pretendard-Regular';
+                background : #2D3848;
+                box-shadow: inset 1px 1px 0 0 #4A5568;
+            }
+            .btn11 {
+                width: 88px;
+                height: 32px;
+                border: 1px solid #1A202C;
+
+                font-size: 12px;
+                line-height: 14.4px;
+                color: #CBD5DF;
+                font-family: 'Pretendard-Regular';
+                background : #2D3848;
+            }
+
+            .btn1:hover{
+                text-decoration: underline;
+                color: #FFFFFF;
+            }
+            .btn1:active{
+                text-decoration: underline;
+                color: #FFFFFF;
+            }
+
+            .btn11:disabled{
+                background: #3A4556;
+                color : #4A5568;
+                border: 1px solid #3A4556
+            }
+            
+
+            /* btn2 */
+            .btn2 {
+                border: 1px solid #1A202C;
+
+                font-size: 12px;
+                line-height: 14.4px;
+
+                color: #439AFF;
+                font-family: 'Pretendard-Regular';
+                background : #2D3848;
+
+                
+                box-shadow: inset 1px 1px 0 0 #4A5568;
+            }
+
+            .btn2:hover {
+                color : #fefefe;
+                text-decoration: underline;
+                background: #439AFF;
+
+                border: 1px solid #439AFF;
+                box-shadow: inset 1px 1px 0 0 #73B4FF;
+                
+            }
+            
+            .btn2:active {
+                color : #fefefe;
+                text-decoration: underline;
+                background: #439AFF;
+
+                border: 1px solid #439AFF;
+                box-shadow: inset 1px 1px 0 0 #3B78BE;
+                
+            }
+
+
+            /* btn3 */
+            .btn3 {
+                border: 1px solid #1A202C;
+
+                font-size: 12px;
+                line-height: 14.4px;
+
+                color: #EB5757;
+                font-family: 'Pretendard-Regular';
+                background : #2D3848;
+
+                
+                box-shadow: inset 1px 1px 0 0 #4A5568;
+            }
+
+            .btn3:hover{
+                color : #fefefe;
+                text-decoration: underline;
+                background: #EB5757;
+
+                border: 1px solid #EB5757;
+                box-shadow: inset 1px 1px 0 0 #FD6F6F;
+            }
+
+            .btn3:active{
+                color : #fefefe;
+                text-decoration: underline;
+                background: #EB5757;
+
+                border: 1px solid #EB5757;
+                box-shadow: inset 1px 1px 0 0 #D94242;
+            }
+        </style>
+    
+</head>
+
+
+<body>
+    <button type="button" class="btn1">Button</button>
+    <button type="button" class="btn11" disabled="disabled">Button</button>
+    <button type="button" class="btn2">Yes</button>
+    <button type="button" class="btn3">Del</button>
+</body>
+</html>

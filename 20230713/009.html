@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .box:nth-child(even) {
+        background-color: seagreen;
+        }
+
+        .translate {
+            transform: translate(50px, 50px);
+        }
+
+        .position {
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        .bar{
+            width: 400px;
+            background-color: beige;
+
+            overflow: hidden;
+        }
+
+        .bar2{
+            background-color: royalblue;
+            height: 30px;
+            width: 100%;
+            transition: all 0.3s;
+
+            /* 2 */
+            transform-origin: 0 0;
+            transform: translateX(-100%);
+            
+        }
+
+        .bar:hover .bar2 {
+            /* width: 100%;
+            transform: scaleX(100); */
+
+            /* 2 */
+            transform: translateX(0);
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="box translate">translate</div>
+    <div class="box position">positive</div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="bar">
+        <div class="bar2"></div>
+    </div>
+</body>
+</html>
+
+<!-- 면접 질문으로 나오긴 함 -->
+<!-- 웹 렌더링 관련 -->
+
+<!-- <aside>
+💡 결론 : 
+정적인 사이트에서 요소의 위치를 단순 배치하는것은 position을 사용해도 괜찮지만,
+
+
+애니메이션이나 혹은 동적으로 요소의 위치를 이동해야 하는 경우 transform 속성을 사용하는 것이 성능에 좋습니다.
+
+</aside> -->
+
+
+<!-- translate3d 와 traslate 중 3d가 성능 좋다 -->

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        table
+    </title>
+
+    <style>
+        table {
+            width: 100%;
+        }
+
+        caption{
+            caption-side: bottom;
+        }
+
+        .col1 {
+            background-color: gold;
+
+            /* 적용안됨 */
+            /* 스타일 적용은 table 태그에 적용시키기 */
+            /* font-weight: bold;
+            font-size: 20px; */
+        }
+
+        .col2 {
+            background-color: blue;
+        }
+
+        .col3 {
+        background-color: #ddd;
+        }
+
+        tbody tr:nth-child(1) {
+            background-color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <h2>테이블의 제목을 따로 적는다면 굳이 캡션을 안 적어도 된다.</h2> -->
+    <table>
+        <caption>테이블의 제목, 설명</caption>
+        <colgroup>
+        <!-- 열 속성 -->
+        <!-- col을 추가하면 뒤로 밀 수 있다. -->
+        <col class="col1">
+        <col style="width:20%;" span="2" class="col2">
+        <col class="col3">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th scope="col">제목</th>
+                <th scope="col">제목</th>
+                <th scope="col">제목</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="2">내용</td>
+                <td>내용</td>
+                
+            </tr>
+        </tbody>
+
+        <tbody>
+            <tr>
+                <th>제목</th>
+                <td>내용</td>
+                <td rowspan="2">내용</td>
+                <td>내용</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+            <th>합계</th>
+            <td>요약내용</td>
+            <td>요약내용</td>
+            <td>요약내용</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
