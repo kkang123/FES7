@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+        input:active{
+            background-color: red;
+        }
+        
+        /* hover는 커서를 올려두었을 때 적용 */
+        /* active 상태는 hover보다 위에 작성해야한다. */
+        button:enabled:hover{
+            background-color: blue;
+        }
+        
+        /* active 클릭 시 red 적용 */
+        button:enabled:active{
+            background-color: red;
+        }
+
+
+
+
+        /* 마우스 클릭시 보임 */
+        .btn1:focus {
+            border: 5px solid green;
+        }
+
+        /* focus와 유사하게 포커스 받은 상태를 나타냄 */
+        /* 클릭 시에는 안 나타나지만 tab으로 이동하면서 지정하면 적용된다. */
+        .btn2:focus-visible{
+            border: 5px solid gold;
+        }
+
+        /* (부모에게 주는 것)자식요소 이벤트 발생 시 적용 */
+        div:focus-within{
+            background-color: skyblue;
+        }
+
+        /* 비활성화 */
+        button:enabled{
+            /* 손가락 모양 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <button type="button" class="btn1">버튼</button>
+        <button type="button" class="btn2">버튼</button>
+        <input type="text">
+    </div>
+</body>
+</html>
