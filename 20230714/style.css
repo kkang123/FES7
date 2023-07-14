@@ -1,0 +1,185 @@
+h1 , h2, p, ul{
+    /* 컴퓨터가 계산 */
+    /* margin: initial; */
+    margin: unset;
+    padding: unset;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1, h2 {
+    font-size : unset;
+    font-weight: unset;
+}
+
+/* 
+브라우저 자동 계산
+=> font-size: unset;
+어 이거 상속되는 애네? inherit
+=> margin: unset;
+어 얘는 상속 안되는데? initial
+
+unset 실무에서 잘 사용하지 않음
+*/
+
+/* -------------------------------- */
+
+div {
+    /* background-color: orange; */
+        /* width: auto; */
+        /* width: 100%; */
+        /* width: 800px; */
+
+
+        /* margin-left: 50px; */
+        /* padding: 40px; */
+
+        /* display: block; */
+
+
+
+        /* margin으로 가운데 정렬 */
+        
+        /* 
+        margin-left: auto;
+        margin-right: auto; 
+        */
+
+
+        /* margin: 0 auto; */
+    }
+
+body{
+    background-image: url(images/background.gif);
+}
+
+    .wrapper{
+        background-color: #ddd;
+        width: 800px;
+        height: auto;
+        margin: 100px auto;
+    }
+
+    .header {
+        background-image: url(images/cover05.png);
+
+        /* 넘치는것 잘라줌 */
+        background-size: cover;
+
+        /* 이미지 가운데 정렬 */
+        background-position: center;
+
+        /* 이미지 부분 패딩 입력 */
+        /* 위 아래, 오른쪽 왼쪽 */
+        padding: 100px 0;
+        color: white;
+    }
+
+    .header img {
+        margin:  0 auto;
+        display: block;
+    }
+
+    .header h1{
+        /* background-color: green; */
+
+        /* h1이 움직인게 아닌 너비 안에서의 텍스트만 가운데*/
+        text-align: center;
+        /* width: 300px; */
+        /* margin: 100px auto; */
+
+        
+        /* display: block; */
+        /* width: auto; 800px */
+
+        font-size: 100px;
+    }
+
+    .header p {
+        border-top: 4px solid white;
+        
+        /* background-color: greenyellow; */
+
+        /* fit-content가 content가 넘칠 떄 width가 맞춰서 늘어 나는게 맞음 */
+        width: fit-content;
+        padding: 10px 20px;
+        margin: 0 auto;
+    }
+
+    .section {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        background-image: url(images/icon-information.png);
+        background-repeat: no-repeat;
+
+        /* right 기준에서 20px 이동 후 세로 가운데 */
+        background-position: right 20px center;
+    }
+
+    .section h2{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: salmon ;
+    }
+    
+
+    /* 이는 section이 너무 많으면 힘들다. */
+    /* .section2 {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        background-image: url(images/icon-skills.png);
+        background-repeat: no-repeat;
+
+
+        background-position: right 20px center;
+    }
+
+    .section2 h2{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: salmon ;
+    } */
+
+
+    /* 우선순우 적용 */
+    /* section 적용 다 되곳에 덮어 씌움 */
+    .skill {
+        background-image: url(images/icon-skills.png);
+    }
+
+    .list li {
+        border-left: 5px solid #ddd;
+        padding-left: 5px;
+    }
+
+    .footer{
+        background-color: #f4f4f4;
+        
+        text-align: center;
+
+        padding: 10px 0;
+    }
+
+    /* div.header {
+        background-image: url(images/cover05.png);
+    } */
+
+
+/* initial value */
+/* width 지정되어 있지 않았을 때 어떤 value가 들어갔는지 확인해야하면 auto는  */
+/* auto란 부모가 제공하는 컨텐츠 너비를 가공 채워야하는 것 */
+
+/* background-color  */
+/* background-color: transparent; 기본값 */
+/* 100%는 마진 보더 패딩을 고려 안함 이는 + a  */
+
+
+/* h1은 text-align으로 가운데 정렬 된 적 없으면 text-aingn은 컨텐츠 (텍스트, 인라인에만 영향을 준다.) */
+
+/* 상속은 몇몇 프로퍼티스마다 상속을 지원하게 만듬 */
