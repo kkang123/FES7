@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>content</title>
+<style>
+    .container {
+    width: 500px;
+    height: 500px;
+
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 100px 100px 100px;
+    /* grid-template-rows: 200px 150px; */
+    grid-template-rows: 100px 100px 100px;
+
+    height: 500px;
+    background-color: #ddd;
+
+    /* 수직 가운데 */
+    align-content: center; 
+
+    /* 기본값 */
+    /* align-content: stretch;  */
+
+    /* justify-content: center; */
+
+
+    /* 컨테이너 안에서의 정렬 */
+    /* align-content: space-between;
+    justify-content: space-between; */
+    align-content: center;
+    justify-content: center;
+
+    /* 글자 크기만큼 축소 */
+    /* 생성된 셀 안에서의 정렬 */
+    align-items: center;
+    justify-items: center;
+}
+
+    .item {
+        width: 50px;
+        height: 50px;
+    background-color: skyblue;
+    }
+
+    .item:nth-child(odd) {
+    background-color: seagreen;
+    }
+
+    .item:nth-child(3) {
+        background-color: salmon;
+
+        /* 아이템에게 자체적으로 주고 싶다면 */
+        align-self: end;
+        justify-self: end;
+    }
+
+    .item-b {
+    align-self: start;
+    }
+
+    .align-seft-start {
+    align-self: start;
+    border: 4px solid royalblue;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="item align-seft-start">A</div>
+    <div class="item item-b">B</div>
+    <div class="item">C</div>
+    <div class="item  align-seft-start">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item">I</div>   
+</div>
+
+
+</body>
+
+</html>
