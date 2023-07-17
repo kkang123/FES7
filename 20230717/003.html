@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .container {
+        display: grid;
+        /* width: 1000px; */
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(2, 1fr 2fr); */
+        /* grid-template-columns: 1fr 2fr 1fr 2fr; */
+        /* grid-template-columns: 500px 1fr 3fr; */
+        /* grid-template-columns: 200px 150px 200px; */
+
+        grid-template-columns: minmax(100px, 150px) 1fr 1fr;
+        grid-template-rows: minmax(100px, 150px) minmax(50px, 100px);
+        gap: 20px 10px;
+        }
+
+    .item{
+        /* width: 100px;
+        height: 100px; */
+        background-color: skyblue;
+    }
+
+    .item:nth-child(odd){
+        background-color: seagreen;
+    }
+    </style>
+</head>
+    
+
+<body>
+        <div class="container">
+            <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsum voluptas nisi odio minus! Pariatur, molestiae necessitatibus. Dolorem quam amet repudiandae. Tempora quas fugiat dolorum quaerat ut voluptas, inventore ullam? </div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+    </div>
+</body>
+</html>
+
+<!-- display: grid; 를 부모요소에 입력하고 -->
+<!-- 부모요소를 grid-container 자식요소를 grid-item 이라고 부름 -->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .container {
+        width: 600px;
+        height: 600px;
+        background-color: #eee;
+        display: grid;
+        gap: 10px;
+
+        /* 숫자는 안되고 id나 클래스 명칭을 적어주는 개념 */
+        grid-template-areas: 
+        /* row */
+        "header header header"
+        "section section aside"
+        "footer footer footer" 
+        ;
+        }
+
+        header{
+            background-color: skyblue;
+    
+            /* 너의 영역은 */
+            grid-area: header;
+
+    
+        
+        }
+
+        section{
+            background-color: navy;
+
+            /* 너의 영역은 */
+            grid-area: section;
+        }
+
+
+        aside {
+            background-color: rebeccapurple;
+
+            grid-area: aside;
+        }
+
+        footer {
+            background-color: salmon;
+
+        /* 너의 영역은 */
+        grid-area: footer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <section>section</section>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>
