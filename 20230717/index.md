@@ -14,6 +14,10 @@
 <br>
 
 - [Grid](#grid)
+    - [grid-columns](#grid-columns)
+    - [grid-rows](#grid-rows)
+- [grid함수](#함수)
+- [grid-area](#grid-area)
 
 # 테이블
 
