@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        
+        /* 최종적으로 완성되는 색깔 */
+        background-color: gold;
+
+        /* 1초 마다 무한 반복 */
+        /* animation: change 1s infinite; */
+
+        /* 1번째 상태 변화 2초, 2번째 상태 변화 1초 //2번 반복 */
+        animation: change 2s 1s 2;
+    }
+
+
+    /* from, to = 0% , 100% (시작점, 종료시점) */
+    @keyframes change {
+        from {
+            /* 크기를 주면 0부터 점점커지게 가능 */
+            scale: 0;
+            background-color: royalblue;
+        }
+
+        /* 중간 지점 */
+        50% {
+            scale: 0.2;
+            background-color: blue;
+        }
+
+        to {
+            scale: 1.2;
+            background-color: seagreen;
+        }
+    }
+
+    /* 라이캣 */
+    .licat{
+        width: 168px;
+        height: 200px;
+        border: 4px solid #000;
+
+        /* 반복하지 않고 좌표값 (0,0) 너비값 높이 값 */
+        /* background-image: url(./img/keyframes-licat.png) no-repeat 0 0 / auto 100%; */
+
+        background-image: url(./img/keyframes-licat.png);
+        background-repeat: no-repeat;
+        
+        /* 이미지 파일의 좌표(left top) */
+        background-position: 0 0;
+        background-size: auto 100%;
+
+
+        /* animation: move-licat 1s infinite steps(6); */
+        /* 이름 진행속도 반복횟수 프레임컷신 */
+        /* steps() 키프레임 형태로 딱딱 끊어서 이어붙치는 역할, steps 6단계를 자연스럽게 이어 붙치는 용도 */
+
+        animation-name: move-licat;
+        /* 재생속도 */
+        animation-duration: 1s;
+        /* 반복횟수 */
+        animation-iteration-count: infinite; 
+        animation-timing-function: steps(6);
+    
+        /* 3초 딜레이 후 실행*/
+        /* animation-delay: 3s; */
+
+    }
+
+    /* hover시 멈춤 */
+    .licat:hover {
+        animation-play-state: paused;
+    }
+
+
+    @keyframes move-licat {
+        /* 0% {
+            background-position: 0 0;
+        }
+        80%{
+            background-position:  0 0;
+        } */
+
+        100% {
+            background-position: right 0;
+        }
+        to{
+
+            /* 배경 포지션 변경 */
+            background-position: right 0;
+            /* 100% 0 */
+        }
+    }
+</style>
+</head>
+
+
+<body>
+    <!-- box -->
+    <!-- <div class="box">box</div> -->
+
+    <!-- licat -->
+    <div class="licat"></div>
+</body>
+</html>
