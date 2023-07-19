@@ -1,0 +1,61 @@
+h1, h2, p {
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/login.png);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    margin-left: 90px;
+    margin-top: 10px;
+}
+
+h1 img {
+    width: 140px;
+}
+
+.main-join-up {
+    display: flex;
+}
+
+.main-join {
+    margin-left: 865px;
+    margin-top: 30px;
+
+    text-decoration: none;
+    color: #767676;
+    font-weight: bold;
+}
+
+
+section {
+    background-color: #fffaf0;
+}
+
+h2{
+    width: 200px;
+}
+
+.meta-img {
+    width: 400px;
+}
+
+
+button {
+    width: 400px;
+    height: 60px;
+    color: #efe1e1;
+    background-color: #29363D;
+
+    font-weight: bold;
+}
+
+/* 위치 설정시 flex나 margin top left는 사용해도 상관없지만 position을 사용하면 안된다. */
