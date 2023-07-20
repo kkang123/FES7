@@ -1,0 +1,75 @@
+body{
+    margin:0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 102, 255) 0%, rgb(49, 221, 6) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap {
+    border: 2px dashed red;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+
+
+    /* 기준 */
+    position: relative;
+
+    /* transition: transform 1s; */
+    transition: transform 0.8s cubic-bezier(0.88, 0.42, 0.56, 1.26);
+    transform-style: preserve-3d;
+    transform: perspective(400px) scale(0.5);
+
+    /* 기준점 변경 */
+    /* transform-origin:  0 50%; */
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+
+    /* text 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    color: #fff;
+
+    /* 부모요소인 기준으로 카드 겹치기 */
+    position: absolute;
+
+    /* 뒷면만 안보이게 된다. */
+    /* 서로 뒷면은 사용자에게 안보이게 된다. */
+    backface-visibility: hidden;
+}
+
+
+.front {
+background-color: rgba(218, 241, 139, 0.8);
+}
+
+.back {
+background-color: rgba(100, 0, 98, 0.8);
+
+/* 뒤집고 */
+transform: rotateY(180deg);
+
+/* front와 겹치고 싶으면 translate나 position 사용 */
+
+
+}
+
+
+/* hover */
+.wrap:hover .card{
+    /* hover시 앞면이 뒤집힌다. */
+    /* transform: rotateY(180deg); */
+    transform: perspective(200px) scale(1.2) rotateY(-360deg);
+}
