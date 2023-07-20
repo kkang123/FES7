@@ -1,16 +1,18 @@
 
+/* font --------------------------------- */
 @font-face {
     font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+        format('woff');
     font-weight: 400;
     font-style: normal;
 }
-
 @font-face {
-    font-family: 'Pretendard-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+font-family: 'Pretendard-Bold';
+src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
+    format('woff');
+font-weight: 700;
+font-style: normal;
 }
 
 
@@ -19,9 +21,10 @@ body {
     margin : 0;
 }
 
-h1 {
+h1, h2, h3 {
     margin: 0;
     padding: 0;
+    font: inherit;
 }
 
 img {
@@ -32,15 +35,51 @@ a {
     text-decoration: none;
 }
 
+input,
+button {
+    font: inherit;
+}
+
+button{
+    border: 0;
+    background: none;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+ol,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 /* CSS-------------------------- */
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 body {
     font-family: 'Pretendard-Regular', sans-serif;
     background-color: #fffaf0;
 }
 
 .max-width {
-    /* 최대 너비는 1224px를 넘어가지 않는다(안주면 무한으로 늘어나기때문이다. */
-    width: 1224px;
+    /* 최대 너비는 1284px를 넘어가지 않는다(안주면 컨텐츠 내용 박스 밖으로 넘어서 나가기 때문이다. */
+    width: 1284px;
     max-width: 100%;
     max-width: calc(100% - 60px);
     margin: auto;
@@ -69,7 +108,55 @@ body {
     width: 156px;
 }
 
-.btn-join{
+
+/* index.html  */
+.header .login-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* 가상요소 */
+/* .header .login-text p::after { 
+    content: '|';
+    color: #d8ddde;
+    margin-left: 24px;
+
+} */
+
+.header .login-text p strong {
+    box-shadow: inset 0 -0.5em 0 rgba(255, 79 ,11, 0.8);
+}
+
+@media (min-width: 601px) {
+    .header .login-text p::after {
+    content: '|';
+    color: #d8ddde;
+    margin-left: 24px;
+}
+}
+@media (max-width: 600px) {
+.header .login-text p {
+    position: absolute;
+    top: 140px;
+    right: 30px;
+}
+}
+
+/* 버튼 */
+[class^='btn'] {
+    display: inline-flex;
+    height: 40px;
+    padding: 0 20px 0 52px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 10px 50%;
+    align-items: center;
+}
+
+.btn-join999999999999{
     /* display: inline-block; */
     /* 인라인은 가로정렬하면서 flex 적용 */
     display: inline-flex;
@@ -97,6 +184,17 @@ body {
 }
 
 
+.btn-login {
+    background-image: url(../img/icon-login.svg);
+}
+.btn-join {
+    background-image: url(../img/icon-join.svg);
+}
+.btn-logout {
+    background-image: url(../img/icon-logout.svg);
+}
+
+
 
 /* footer */
 .footer {
@@ -120,7 +218,25 @@ body {
     display: block;
     width: 100%;
     margin-bottom: 30px;
+    position: relative;
     }
+
+    .svg-heart {
+        stroke: transparent;
+        stroke-width: 0;
+        transform-origin: 50% 20px;
+        scale: 0.8;
+        animation: heart 0.5s cubic-bezier(0.69, 1.08, 0.74, 0.35) infinite alternate;
+    }
+
+    @keyframes heart {
+        100% {
+        stroke: #ffc7d1;
+        stroke-width: 2px;
+        scale: 2.5;
+        }
+    }
+
     .main-title strong {
     color: #29363d;
     font-size: 24px;
@@ -130,7 +246,7 @@ body {
 }
 
 
-/* 로그인 */
+/* 로그인 form */
 .form {
     width: 392px;
     /* margin auot는 중앙 정렬 */
@@ -163,21 +279,28 @@ body {
     border-radius: 4px;
 }
 
-.main-title svg {
+
+.form textarea {
     display: block;
     width: 100%;
-    margin-bottom: 30px;
-    position: relative;
-}
-.svg-heart {
-    stroke: transparent;
-    stroke-width: 0;
-    transform-origin: 50% 20px;
-    scale: 0.8;
-    animation: heart 0.5s cubic-bezier(0.69, 1.08, 0.74, 0.35) infinite alternate;
+    height: 360px;
+    border: 1px solid #677880;
+    border-radius: 4px;
+
+    /* 일기장 작성하는 곳 마우스로 사이즈 변경하는 것을 막는다. */
+    resize: none;
+
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
 }
 
-@keyframes heart {
+
+
+
+
+
+/* @keyframes heart {
     50% {
     stroke: #ffc7d1;
     stroke-width: 2px;
@@ -190,7 +313,7 @@ body {
     scale: 2.5;
     rotate: 20deg;
     }
-}
+} */
 /* svg 하트 애니메이션 적용하기 */
 
 
