@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        body {
+    background-color: #ddd;
+    }
+
+    .container {
+    width: 800px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 30px;
+    gap: 30px;
+    display: flex;
+    }
+
+    .sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: beige;
+    padding: 20px;
+    }
+
+    .main {
+    /* flex items의 자식 크기가 매우 클때. 자식과 같이 커지는 flex items */
+    background-color: gold;
+    padding: 20px;
+    min-width: auto;
+    flex-grow: 1;
+    }
+
+    .main.type_resolved {
+    /* 문제 해결: flex-items의 min-width의 초기값은 auto, 컨텐츠 크기만큼 */
+    /* 그 부분을 0으로 다시 바꿔주면 꼭 갖춰져야 할 최소사이즈가 없어지기에 축소가능한 상태가 됨 */
+    min-width: 0;
+    }
+
+    .grid {
+    display: flex;
+    gap: 20px;
+    color: white;
+    }
+
+    .grid-item {
+    padding: 20px;
+    background-color: dodgerblue;
+    width: 150px;
+    } 
+    </style>
+
+
+</head>
+
+
+<!-- 문제화면 -->
+<section class="container">
+    <aside class="sidebar">문제화면</aside> 
+    <main class="main">
+    
+    <div class="grid">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+    </div>
+    
+    </main>
+</section>
+
+<!-- 개선화면 -->
+<section class="container">
+    <aside class="sidebar">개선화면</aside> 
+    <main class="main type_resolved">
+    
+    <div class="grid">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+    </div>
+    
+    </main>
+</section>
+</html>
