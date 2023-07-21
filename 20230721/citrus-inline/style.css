@@ -1,0 +1,68 @@
+.wrapper{
+    /* background-color: orange; */
+    box-shadow: inset 0 0 20px red; 
+    /* x y 축 블러처리 값 */
+    /* inset을 맨 앞에 작성하면 그림자가 안쪽에 적용된다. */
+
+    /* padding: 20px; */
+
+    /* 옆에 남는 흰색 공간은 사용가능한 공간(어밸러블) */
+    width: 800px;
+
+
+    /* 어밸러블 스페이스를 브라우저가 계산해서 나눈다. */
+/*     
+    margin-left: auto;
+    margin-right: auto; 
+    */
+    margin: 100px auto;
+
+    /* margin은 상하단 auto 안된다. px은 가능하지만 자동으로 안되는 이유는 다른 블록들이 올 공간이기 때문에 auto는 안 먹는다. */
+    /* flex, grid, position을 사용할 때는 margin 상하단 auto 개념이 적용된다. */
+
+}
+
+.wrapper a {
+    /* background-color: orangered; */
+    width: 200px;
+    height: 200px;
+    /* display: block; */
+
+    display: inline-block;
+    /* 내부에 텍스트가 없으면 전기줄에 앉을 당사자가 없다.
+    baseline에 하단 부분이 붙는다(이미지도 동일하게 border-bottom부분이 붙는다.
+     */
+
+
+    /* 기본값은 baseline */
+    vertical-align: top;
+    /* CSS */
+    
+    /* width 상속 ㄴㄴ */
+}
+
+
+
+.lemon {
+    background-color: antiquewhite;
+}
+
+
+
+
+/* 
+인라인은 새가 전선에 주르르 앉아있는 모습
+전기줄은 baseline = line 선상에 text가 작성됨 (이미지도 inline에 속한다.)
+
+inline은 컨텐츠만큼 공간을 차지한다. 알아서 설정인된다(좌우는 가능)
+상하단 margin값을 줄 수 없다.
+width, height 값 적용 안됨
+
+inline padding 상하단이 적용되지 않는다(눈에는 보이지만 암튼 적용 안된다.)
+*/
+
+
+
+
+/* 
+min-width: auto;의 문제점은 내부 컨텐츠 크기만큼 최소너비가 정해지기 때문에, 컨텐츠가 레이아웃보다 커지면 레이아웃도 같이 커져서 변형된다. 따라서 flex-basis를 쓸 땐 min-width값을 0으로 주는 등 따로 정해주어서 레이아웃의 변형이 없이 내부 컨텐츠만 레이아웃보다 커지도록 설정을 해준다. 또한, 다른 flex-items의 영향을 받지 않기 위해서 flex-shrink를 0으로 해주어 더이상 작아지지 않도록 해준다. */
