@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt-hide {
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            
+            /* 경로에 따라서 html을 자르는 요소, inset을 사용하면 네모로 잘라준다. */
+            clip-path: inset(50%);
+
+
+            /* 1px 씩 남기는 이유 읽히기 위해, 스크린리더는 브라우저에서 읽히는 것 */
+        }
+
+        .labl-hold{
+            position: relative;
+        }
+
+        .labl-hold::before {
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            border: 1px solid black;
+            vertical-align: -5px;
+
+
+            /* inline요소는 개발자 도구 computed 탭에서 확인 */
+            /* 가상요소는 inline이기 때문에 width, height 적용 안됨 */
+        }
+
+        
+
+        .inp-Hold:focus+.labl-hold::before {
+            outline: 2px solid teal;
+
+            /* 아웃라인 범위를 얼마나 확장할지 */
+            outline-offset: 3px;
+        }
+
+
+        .labl-hold::after {
+            content: '';
+
+            /* display블록을 쓸거면 대신 position으로 사용 가능 (코드 낭비 방지) */
+            position: absolute;
+            top: -3px;
+            left: 20px;
+            width: 22px;
+            height: 22px;
+
+            /* background: url('images/checkmark.png') 0 0/22px no-repeat; */
+            background-image: url('./images/checkmark.png');
+            background-size: 22px;
+            background-repeat: no-repeat;
+            
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* 체크될 때 */
+        /* 클래스 선택자(:), 가상요소 선택자(::) / 요소의 상태에 따라 선택*/
+        /* 가상 클래스 만드는 이유는  */
+        .inphold:checked+.labl-hold::after {
+            left: 0;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- id와 for로 연결할 필요없는 코드 -->
+    <!-- <label for="inpHold"><input type="text" id="inpHold">로그인 상태 유지</label> -->
+
+
+    <input type="checkbox" id="inpHold" class="inphold txt-hide">
+    <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+</body>
+</html>
