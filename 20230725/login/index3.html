@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 구현</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+    <div class="wrap">
+        <h2>로그인 또는 회원가입</h2>
+
+        <div class="division-line"></div>
+
+        <p class="qua-p">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+        <input type="text" class="user-id" placeholder="아이디">
+        <strong>아이디를 입력해주세요</strong>
+        <input type="password" class="user-password" placeholder="비밀번호">
+        <label class="login-state">로그인 상태 유지</label>
+        <button type="button">로그인</button>
+        회원가입
+        아이디/비밀번호 찾기
+        또는
+
+        <div class="login-btn">
+
+            <button type="button" class="google-login btn-style">구글 계정으로 로그인</button>
+            <button type="button" class="facebook-login btn-style">페이스북 계정으로 로그인</button>
+            <button type="button" class="naver-login btn-style">네이버 계정으로 로그인</button>
+            <button type="button" class="kakao-login btn-style">카카오톡 계정으로 로그인</button>
+        </div>
+            
+
+
+
+
+
+
+    </div>
+</body>
+</html>
+
+
+<!-- 로그인 창을 모달이라 생각하고 aticle 요소로 생성 -->
+
+
+<!-- 요소가 3개이상 반복되면 ul태그를 사용한다. -->
+
+
+<!-- 로그인 버튼을 앵커나 버튼 사용
+
+    앵커는 새로운 창으로 넘어갈 때 앵커태그를 사용
+
+    페이지 안에서 다른 모달이 뜨면 button을 사용
+-->
+
+<!-- 아이디를 입력해주요. strong 태그 붙어있는 상태로 -->
+
+
+<!-- 이미지를 가상요소에 렌더링 시키는 방법 사용할 것 ::before -->
+
+<!-- background-position을 사용해서 모양 변경 -->
+
+
+<!-- 굳이 스프라이트 안 써도됨 -->
+
+<!-- /* -------------------- */
+
+[class^="icon"]::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url('images_login/icon_sprites_retina.png');
+    background-size: 117px 84px;
+}
+
+.link-sns-login.icon-facebook {
+    border: 1px solid #2D9CDB;
+}
+
+.link-sns-login.icon-naver {
+    border: 1px solid #00BF18;
+}
+
+.link-sns-login.icon-kakao {
+    border: 1px solid #F2C94C;
+}
+
+.icon-google::before {
+    width: 22px;
+    height: 22px;
+    background-position: -52px -10px;
+    /* background: url("images_login/icon_google.png") no-repeat; */
+}
+
+.icon-naver::before {
+    width: 22px;
+    height: 22px;
+    background-position: -10px -10px;
+    /* background: url("images_login/icon_naver.png") no-repeat; */
+}
+
+.icon-kakao::before {
+    width: 22px;
+    height: 22px;
+    background-position: -10px -52px;
+    /* background: url("images_login/icon_kakao.png") no-repeat; */
+}
+
+.icon-facebook::before {
+    height: 24px;
+    width: 13px;
+    background-position: -93px -10px;
+
+    /* background: url("images_login/icon_facebook.png") center no-repeat; */
+
+} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 이미지 배율은 엥간히 가로세로 2배짜리 사이즈를 사용하면 선명하다 -->
