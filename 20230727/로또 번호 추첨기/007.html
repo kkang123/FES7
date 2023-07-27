@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+
+
+<body>
+    <h1>로또 번호 추첨기3</h1>
+    <script>
+        /*
+        for(var i = 0; i < 6; i++){
+            document.write(i);
+        }*/
+
+
+        // 6번 반복한 값이 나옴(중복될 수 있음)
+        var lotto = [];
+
+        for(var i = 0; i < 6; i++){
+            lotto.push(parseInt(Math.random() * 45 + 1));
+        }
+        document.write(lotto);
+
+    </script>
+</body>
+</html>
+
+<!-- 
+    DRY
+    반복코드는 안 좋게 생각한다.
+
+    이때 사용하는 것이 
+    반복문
+    for , while
+
+
+    for (시작; 끝; 증가) {
+        반복하려는 코드
+    }
+
+    i가 0부터 6까지 증가하며 반복되고 6이면 되면 깨진다.
+    for (var i=0; i < 6; i++) {
+        반복하려는 코드
+    }
+
+
+-->

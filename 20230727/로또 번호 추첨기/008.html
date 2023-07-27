@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 문</title>
+
+</head>
+
+
+<body>
+    <script>
+        // 만약 중복이 아니라면 .push
+        var lotto = []
+        for(var i = 0; i < 6; i++) {
+            var num = parseInt(Math.random() * 45 + 1);
+
+            // indexOf할 떄 값이없으면 == -1
+            //  = 만 쓰면 값을 넣는다. / == 값을 비교한다.
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num);
+            }
+        }
+        document.write(lotto)
+
+        // 값이 5개만 들어 갈 수 있다.
+        // 이때 반복문을 사용한다.
+
+    </script>
+</body>
+</html>
+
+
+<!--  
+    ~뭐뭐가 아니라면
+
+    조건부
+
+    if (조건) {
+        참일 경우
+    }
+
+
+    indexOf(값)
+    값이 있으면 위치, 없으면 -1이 출력된다.
+-->
