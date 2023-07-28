@@ -112,9 +112,9 @@ strong {
 }
 
 
-.[class^=icon]   
+/* .[class^=icon]    */
 
-.login-btn{
+.sns-login-btn{
     display: flex;
     flex-direction: column;
 
@@ -164,6 +164,13 @@ strong {
 }
 
 
-
-
-
+.login-btn {
+    color: white;
+    background-color: 
+    #2F80ED;
+    width : 472px;
+    height : 50px;
+    margin-left: 24px;
+    border: none;
+    border-radius: 5px;
+}
