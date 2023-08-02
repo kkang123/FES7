@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 메서드</title>
+
+</head>
+
+
+<body>
+    <script>
+        let s = 'paullab CEO 이호준';
+        let ss = 'CTO 김창영';
+        let sss = 'paullab CEO 이호준 CTO 김창영'
+        let ssss = 'paullab CEO 이호준 CTO 김창영 CTO 홍길동'
+
+        //replace
+        console.log(s.replace('CEO', 'CFO'));
+        console.log(s.replace('/C[ET]0/g', '잡부'));
+        //concat
+
+
+
+        // replace 매우 고급 문법 보강 설명 //
+        const string = `hojun, lee
+        gildong, hong
+        hojung, choi
+        junho, lee`
+
+
+        let result1 = string.replace(/(\w+), (\w+)/gm, "$1 $2");
+        console.log(result1)
+
+        let result2 = string.replace(/(\w+), (\w+)/gm, "$2 $1");
+        console.log(result2)
+
+        let result3 = string.replace(/(\w+), (\w+)/gm, "제 이름은 $2 제 성은 $1 입니다.");
+        console.log(result3)
+
+        // replaceAll
+        // 사용에 주의해주세요. 구 브라우저에서 작동하지 않을 확률이 매우 높습니다. caniuse
+        // 21년도에 추가된 기능입니다.
+        console.log(ssss.replace('CTO', '잡부'));
+
+
+        // let s = 'paullab CEO 이호준';
+        // let ss = 'CTO 김창영';
+        // let sss = 'paullab CEO 이호준 CTO 김창영'
+        // let ssss = 'paullab CEO 이호준 CTO 김창영 CTO 홍길동'
+
+        //includes
+        ss.includes('CTO') //True
+        ss.includes('CEO') //false
+
+        // 메서드 채이닝
+        // 여러개의 메서드를 확인하는 것 'FALSE'라고 표시된다.
+        // 메서드 채이닝은 길어지면 가독성이 떨어집니다. 가독성을 위해 개행을 해주면 좋다.
+        ssss.replace('CEO', 'CFO').includes('CEO').toString().toUpperCase()
+
+        ssss
+            .replace('CEO','CFO')
+            .includes('CEO')
+            .toString()
+            .toUpperCase()
+
+
+
+        //split
+        s.split(' ') // 띄어쓰기 기준 ['paullab', 'CEO', '이호준']
+        '010-5044-2903'.split('-') // ['010', '5044','2903']
+        '010-5044-2903'.split(' ') // 띄어쓰기가 없다.
+        '010-5044-2903'.split('') // ['0','1','0','5','0','4','4','2','9','0','3']
+        
+
+
+        // 문제: text1 ~ text4를 split을 사용해서 아래 배열로 만들어주세요.
+        let text1 = 'aa bb cc dd'
+        let text2 = 'aa-bb-cc-dd'
+        let text3 = 'aa,bb,cc,dd'
+        let text4 = 'aa,bb-cc-dd' // 중급자 분들만 하세요.
+        // ['aa', 'bb', 'cc', 'dd']
+        console.log(text1.split(' '));
+        console.log(text2.split('-'));
+        console.log(text3.split(','));
+        console.log(text4.split(/[,-]/));
+
+        // 텍스트 4 원본에 적용되는 것은 아님
+        //let text5 = text4.replace(',', '-')
+        // text5.split('-')
+
+        // trim
+        // 앞 뒤 공백 있을 시 사용
+        let text6 = '    aa bb cc dd    '
+        text6.trim() // 'aa bb cc dd'
+        text6.replaceAll(' ', '') // 'aabbccdd'
+
+        //padStart
+        // 빈공간을 0으로 채우기
+        let text7 = '123'
+        text7.padStart(5, '0') // '00123'
+
+        
+        // 카카오 입사문제 일부(padStart, replace만 사용)
+        //  우리목표 : 00101 -> '  # #'
+        let text8 = '101'
+        text8.padStart(5, '0').replace('0', ' ').replace('1', '#')
+        // parseInt('101', 2) 십진수 표시
+
+
+
+
+
+        // concat
+        // tex1에 text2 이어붙침
+        text1.concat(text2)
+    </script>
+</body>
+</html>
