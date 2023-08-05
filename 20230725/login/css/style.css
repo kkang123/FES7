@@ -16,7 +16,7 @@ body, h2, p, button {
 .wrap{
     background-color: #fff;
     width: 520px;
-    height: 712px;
+    height: 736px;
     /* margin-top: 162px;
     margin-left: 1978px; */
 
@@ -96,21 +96,108 @@ strong {
     padding-left: 16px;
 }
 
+/* 로그인 상태 유지 */
 .login-state {
-    width: 141px;
-    height: 22px;
+    width: 180px;
+    height: 20px;
     margin-top: 16px;
     margin-left: 28px;
-
+    font-size: 16px;
+    line-height: 20.03px;
+    font-weight: 500;
     color: #767676;
 }
 
 .login-state::before {
-    
+    content: "";
+    display: inline-block;
     background-image: url(../img/check-box.png);
     background-size: 22px 22px;
+    margin-right: 8px;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    background-color: #2F80ED;
 }
 
+/* 로그인 버튼 */
+.login-btn {
+    font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+    color: white;
+    background-color: 
+    #2F80ED;
+    width : 472px;
+    height : 50px;
+    margin-left: 24px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration-line: none;
+}
+
+.id_pw_help {
+    font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    color: #767676;
+}
+
+.id_pw_help .user-join::after{
+    content: "|";
+    margin-left: 14px;
+    margin-right: 12px;
+}
+
+
+.add_login{
+    font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 30px;
+
+    font-size: 14px;
+    line-height: 17.53px;
+    font-weight: 400;
+    color: #767676;
+
+
+    box-sizing: border-box;
+}
+
+.add_login::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 210px;
+    height: 1px;
+    top: 8px;
+    margin-left: 24px;
+    background-color: #c4c4c4;
+}
+
+.add_login::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 210px;
+    height: 1px;
+    top: 8px;
+    right: 3px;
+    margin-right: 24px;
+    background-color: #c4c4c4;
+}
+
+
+
+.sns-login-btn{
+    /* margin-top: 20px;    */
+    box-sizing: border-box;
+}
 
 /* .[class^=icon]    */
 
@@ -135,42 +222,112 @@ strong {
 .google-login{
     color: #767676;
     border: 1px solid #767676;
-    
+    position: relative;
 }
 .facebook-login{
     color: #2d9cdb;
     border: 1px solid #2d9cdb;
+    position: relative;
     
 }
 .naver-login{
     color: #00bf18;
     border: 1px solid #00bf18;
+    position: relative;
 
 }
 .kakao-login{
+    position: relative;
     color: #f2c94c;
     border: 1px solid #f2c94c;
     margin-bottom: 25px;
+    
+}
+
+
+.google-login::before{
+    content: '';
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-size: 22px 22px;
+    background-position: -10px -52px;
+    background: url("../img/Google__G__Logo\ 1.png") no-repeat;
+    top: 10px;
+
+    position: absolute;
+    left: 13px;
 
 }
 
+.facebook-login::before{
+    content: '';
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-size: 22px 22px;
+    background-position: -10px -52px;
+    background: url("../img/facebook.png") no-repeat;
+    /* vertical-align: middle; */
+    top: 10px;
+
+    position: absolute;
+    left: 13px;
+
+}
+
+.naver-login::before{
+    content: '';
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-size: 22px 22px;
+    background-position: -10px -52px;
+    background: url("../img/naver-logo.png") no-repeat;
+    top: 10px;
+
+    position: absolute;
+    left: 13px;
+
+}
 
 
 .kakao-login::before{
-    width: 28px; 
-    height: 28px;
-    background-position: -10px -10px;
-    background-image: url(../img/css_sprites.png);
+    content: '';
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-size: 22px 22px;
+    background-position: -10px -52px;
+    background: url("../img/message-circle.png") no-repeat;
+    top: 10px;
+
+    position: absolute;
+    left: 13px;
+
 }
 
 
-.login-btn {
-    color: white;
-    background-color: 
-    #2F80ED;
-    width : 472px;
-    height : 50px;
-    margin-left: 24px;
-    border: none;
-    border-radius: 5px;
+
+.login-state {
+    width: 180px;
+    height: 20px;
+    margin-top: 16px;
+    margin-left: 28px;
+    font-size: 16px;
+    line-height: 20.03px;
+    font-weight: 500;
+    color: #767676;
+}
+
+.login-state::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../img/check-box.png);
+    background-size: 22px 22px;
+    margin-right: 8px;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    background-color: #2F80ED;
 }
