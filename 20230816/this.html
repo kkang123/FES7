@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+    
+<body>
+    <button id="btn1">클릭해봐요!</button>
+    <button id="btn2">클릭해봐요!</button>
+
+    <script>
+        function a(){
+            console.log(this);
+        }
+        // a();  // window(브라우저 환경에서 전역공간을 의미)
+
+        const myObj = {
+            val1 : 100,
+            func1(){
+                console.log(this);
+            }
+        }
+
+        // 버튼에 ID값 할당
+        const button1 = document.getElementById("btn1");
+        const button2 = document.getElementById("btn2");
+        // const button2 = window.document.getElementById("btn2");
+        
+        // 버튼 클릭 시 버튼 요소를 가르킴(콘솔창에 출력)
+        button1.addEventListener('click', myObj.func1);
+        button2.addEventListener('click', myObj.func1);
+
+        
+        // let test = myObj.func1;
+        // test();
+
+        // myObj.func1();
+        // 두 번째는 객체가 찍힌다
+        // {val1: 100, func1: ƒ}
+    </script>
+
+</body>
+</html>
