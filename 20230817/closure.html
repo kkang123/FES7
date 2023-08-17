@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+    
+<body>
+    <script>
+        // let a = 10;
+        const person = function () {
+            let age = 15;
+
+            return {
+                // 객체
+                name : 'jaehyun',
+
+                getAge : function(){
+                    return age;
+                },
+
+                setAge : function(val){
+                    // 새로운 val을 받아와 age에 적용
+                    age = val
+                }
+            }
+        }
+
+        const man = person();
+
+        // person이 return되면 person이라는 함수는 사라진다.
+        // 하지만 age는 어딘가 메모리에 남아있다.
+        // 이유는 내부 메서드에서 age를 참조하고 있기 때문이다.
+        // age에 대한 접근 권한은 return 객체에만 있다.
+        // getAge를 통해서만 접근하고 setAge를 통해서만 수정이 가능하며 안전하다.
+
+        const outer = function () {
+            let a = 1;
+            // 그 누구도 접근이 불가능하고, inner만 접근 가능한 공간
+
+            const inner = function(){
+                let b = 5;
+                let c = 6;
+                a = a + b + c;
+
+                console.log(a);
+
+            }
+
+            // inner();
+
+            // 밖으로 반환
+            return inner;
+        }
+
+        // outer();
+
+        const newInner = outer();
+        newInner();
+
+        //스코프 체인 가능
+        // outer는 return을 만나면 사라지는데 어디서 a 값을 가져오나?? inner 함수에서 a를 사용하기 때문에 return 키워드를 만나도 사라지지 않고 사용할 수 있다.
+
+        // outer() 실행 후 a 
+
+
+        // 함수는 실행이 끝나면 메모리 상에서 사라지는게 맞다.
+
+
+        // closure가 뭔가요?
+        // 폐쇄된 공간을 호출할 수 있는 유일한 방법
+        // 만드는 이유는?
+        // 외부에서 접근할 수 없는 폐쇄된 공간을 만들어서 함부로 수정 할 수 없는 데이터를 만드는 디자인패턴
+    </script>
+
+</body>
+</html>
