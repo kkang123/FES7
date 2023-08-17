@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀함수 배열 합 구하기</title>
+</head>
+    
+<body>
+    <script>
+        function addElements(arr) {
+            console.log(arr);
+
+            // addElements();
+
+            if(arr.length === 0){
+                return 0
+            }
+
+            return arr[0] + addElements(arr.slice(1));  
+            // 1번 째 인덱스부터 짤라서 새로운 문자열로 반환(배열도 동일)
+        }
+
+        // addElements([1, 2, 3, 4]);
+
+        console.log(addElements([1, 2, 3, 4]));
+        // 1 + addElements(arr.slice(1) === [2, 3, 4])
+        // 2 + addElements([3, 4])
+
+        // 최종
+        // 1 + 2 + 3 + 4 + addElements([])
+
+        // 재귀함수 중단 => 조건식 if 사용
+
+
+
+        
+        /*
+        (function () {
+
+            function addElements(arr) {
+                console.log(arr);
+
+                if (arr.length === 0) {
+                    return 0
+                }
+                return arr[0] + addElements(arr.slice(1));
+            }
+
+            console.log(addElements([1, 2, 3, 4]));
+            // 1 + 2 + 3 + 4 + addElements([]])
+
+        })()
+    */
+    </script>
+
+</body>
+</html>
