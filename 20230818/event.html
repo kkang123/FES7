@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .canvas{
+            width : 100px;
+            height : 100px;
+            background-color: black;
+        }
+        .color-red{
+            background-color: red;
+        }
+        .color-blue{
+            background-color: blue;
+        }
+        .color-green{
+            background-color: green;
+        }
+    </style>
+</head>
+    
+<body>
+    <!-- 쿼리셀렉터 사용 -->
+    <div class="canvas"></div>
+    <button class="painte-rect">red</button>
+    <button class="painte-rect">blue</button>
+    <button class="painte-rect">green</button>
+
+    <script>
+        const btn = document.querySelectorAll(".point-rect");
+        const canvas = document.querySelector(".canvas");
+        function makeColorful(e) {
+            btn.forEach((x, i) => {
+                canvas.classList.remove(`color-${x.innerText}`);
+            });
+
+            const newClass = e.target.innerText;
+
+            canvas.classList.add(`colors-${newClass}`);
+            
+        }
+        btn.forEach((x, i) => {
+            x.addEventListener("click", makeColorful);
+        });
+    </script>
+
+</body>
+</html>

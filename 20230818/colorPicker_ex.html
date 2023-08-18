@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color</title>
+    <style>
+    ul {
+        list-style: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .screen {
+        background-color: black;
+        width: 500px;
+        height: 500px;
+        transition: 1s;
+      }
+      .button-container {
+        display: flex;
+        gap: 70px;
+      }
+      button {
+        background-color: #fff;
+        width: 70px;
+        padding: 3px;
+        transition: 0.2s;
+        &:hover {
+          transition: 0.2s;
+          background-color: #6b6b6b;
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="screen"></span>
+
+      <ul class="button-container">
+        <li class="red"><button>red</button></li>
+        <li class="yellow"><button>yellow</button></li>
+        <li class="green"><button>green</button></li>
+      </ul>
+    </main>
+  </body>
+  <script>
+    // querySelector로 호출
+    const redBtn = document.querySelector(".red");
+    const yellowBtn = document.querySelector(".yellow");
+    const greenBtn = document.querySelector(".green");
+
+    const screen = document.querySelector(".screen");
+
+    redBtn.addEventListener("click", (e) => {
+    screen.style.backgroundColor = "red";
+    });
+
+    yellowBtn.addEventListener("click", (e) => {
+    screen.style.backgroundColor = "yellow";
+    });
+
+    greenBtn.addEventListener("click", (e) => {
+    screen.style.backgroundColor = "green";
+    });
+</script>
+</html>
+
+<script>
+//     /*
+// <!DOCTYPE html>
+// <html lang="ko">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title></title>
+//     <style>
+//         .event_wrap {
+//             margin: 0 auto;
+//             max-width: 500px;
+//         }
+//         .box{
+//             width: 100%;
+//             height: 500px;
+//             background-color: black;
+//             transition: all 0.2s;
+//         }
+//         .btn_wrap {
+//             list-style-position: inside;
+//             box-sizing: border-box;
+//             width: 100%;
+//             padding: 20px 30px;
+//             display: flex;
+//             justify-content: space-between;
+//         }
+//     </style>
+// </head>
+// <body>
+//     <div class="event_wrap">
+//         <!--바꿀 배경 영역-->
+//         <div class="box" id="bg_change"></div>
+
+//         <ul class="btn_wrap">
+//             <li>
+//                 <button type="button" id="red" class="btn_change">빨강</button>
+//             </li>
+
+//             <li>
+//                 <button type="button" id="yellow" class="btn_change">노랑</button>
+//             </li>
+
+//             <li>
+//                 <button type="button" id="green" class="btn_change">초록</button>
+//             </li>
+//         </ul>
+//     </div>
+
+    
+//     <script>
+//         let btn = document.getElementsByClassName('btn_change');
+//         // 버튼체인지를 몽땅 불러다가 적용
+//         let bg = document.getElementById('bg_change');
+//         // 색깔이 변경
+
+//         for(let i = 0; i < 3; i++){ //for문은 3번 회전
+//             // 버튼[i]번째
+//             btn[i].addEventListener('click',function(){
+//                 //클릭된 버튼 아이디 불러오기
+
+
+//                 let colorName = this.id;
+//                 // this는 이벤트가 발생하는 btn[i]요소를 가르킴
+
+
+//                 bg.style.backgroundColor = colorName;
+//             });
+//         }
+//         */
+    </script>
