@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    
+<body>
+    <article class="parent">
+        <ol>
+            <li><button class="btn-first" type="button">버튼1</button></li>
+            <li><button type="button">버튼2</button></li>
+            <li><button type="button">버튼3</button></li>
+        </ol>
+    </article>
+    
+    <script>
+        /*
+        const parent = document.querySelector('.parent');
+
+        //parent 영역안에 클릭하면, event에 대한 정보 
+        parent.addEventListener('click', function (event) {
+            console.log(event.target);
+            console.log(event.currentTarget);
+        });
+        */
+
+        /*
+        const parent = document.querySelector('.parent');
+
+        parent.addEventListener('click', function (event) {
+            console.log(event);
+            if(event.target.nodeName === "LI"){
+                // 영역 클릭시 hello로 변경
+                event.target.textContent = "hello";
+            }
+        
+        });
+        */
+
+        const parent = document.querySelector('.parent');
+
+        parent.addEventListener('click', (event) => {
+
+            console.log(this);
+            console.log(event.currentTarget);
+
+            // 이벤트가 발생하는 대상을 조건식으로 특정하기
+            if(event.target.nodeName === "LI"){
+                // 영역 클릭시 hello로 변경
+                event.target.textContent = "hello";
+            }
+        });
+
+        myObj = {
+            name : 'jaehyun',
+            walk() {
+                parent.addEventListener('click', () => {
+                    console.log(this.name, ' is walking');
+                });
+                // this는 myObj를 가르킨다.
+            }
+        }
+
+    </script>
+
+</body>
+</html>
