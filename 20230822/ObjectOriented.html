@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    
+<body>
+    <script>
+
+        const me = {
+        name: '한재현',
+        address: '제주도 제주시 인다 1길',
+        phoneNum: '010-8000-0000',
+        canWalk: function () {
+            console.log('재현이가 걷는다.');
+        },
+        teaching: function (student) {
+            student.levelUp();
+        }
+    }
+
+        const lion = {
+        level: 1,
+        levelUp : function(){
+            this.level++;
+        }
+        }
+
+        // me라는 객체가 lion이라는 객체를 사용
+        me.teaching(lion);
+
+
+        /*
+        const me = {
+            name : '김지헌',
+            address : '123123',
+            phone : '010-1111-1111',
+            JJIbi : function () {
+                console.log('찌비를 부른다.');
+            }
+        }
+        */
+
+
+        // 생성자 굳이 안써도 된다. 하지만 쓰면 좋다
+        // 왜 우리는 생성자를 쓰는가?
+        // 생성자를 통해 생성된 객체는 같은 프로퍼티를 공유
+
+        const arr = new Array(1, 2, 3);
+        const arr1 = new Array(1, 2, 3);
+
+        function Factory(name) {
+            this.myname = name;
+            // this는 인스턴스다.
+            // robot1_1.myname = 재현;
+
+            this.sayYourName = function(){
+                console.log('삘비릴비비리 제 이름은 ' + this.myname + '입니다....!!');
+            }
+        }
+
+        const robot1_1 = new Factory('재현');
+
+        </script>
+
+</body>
+</html>
