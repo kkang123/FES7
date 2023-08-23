@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    
+<body>
+    <script>
+        // 1
+        /*
+        class Factory {
+            constructor(taste1, taste2) {
+                this.taste1 = taste1;
+                this.taste2 = taste2;
+            }
+
+            taste() {
+                console.log(`${this.taste1}와 ${this.taste2} 맛이 난다`);
+            }
+        }
+
+        // 상속
+        class FiresSausage extends Factory {
+            fireTaste() {
+                this.taste();
+                console.log('불맛이 난다!');
+            }
+        }
+
+        const sausage = new FiresSausage('소고기', '파');
+        sausage.fireTaste();
+        */
+
+
+        // 2
+        class Sausage {
+            constructor(item1, item2){
+                this.item1 = item1;
+                this.item2 = item2;
+                this.name = `${item1} ${item2} 소세지`;
+            }
+
+            // 오바라이딩 (덮어쓰다)
+            taste() {
+                console.log(`소세지에서 ${this.itme1}와 ${this.item2}의 맛이 난다!`);
+            }
+        }
+
+
+        class FiresSausage extends Factory {
+             // 오바라이딩 (덮어쓰다)
+            taste() {
+                console.log(`소세지에서 불맛이 어우러진 ${this.itme1}와 ${this.item2}의 맛이 난다`);
+
+                // 오버로딩
+                // taste(msg)
+                console.log(`소세지에서 불맛이 어우러진 ${this.itme1}와 ${this.item2}의 맛이 난다 ${msg} 때문이다.`);
+        }
+    }
+
+     // const sausage = new Sausage();
+    const fireSausage = new FiresSausage('계란', '파');
+
+
+    // JS는 오버로드이 불가능한가?? 비슷하게 가능은 하다.
+
+
+  // 소시지 클래스를 상속받는 FiresSausage 파생클래스를 생성해봅니다. 파생클래스의 taste 메서드를 실행하면 콘솔 메세지에 불맛이 나기 시작합니다.
+
+
+    // 내부적으로는 프로토타입과 생성자 함수로 굴러간다.
+
+
+    // 오버라이딩은 덮어쓴다라고 생각
+    // 부모에 메소드가 있지만 자식에서 똑같은 메소드를 만들어서 사용하는 부모의 메소드를 자식의 메소드에 덮어 쓴다고 생각하면 쉽다.
+
+    // 오버로딩
+    // 과적
+    // 메소드가 있고 그냥 쓰면하지만 굳이 똑같은 메소드를 만들어 매개변수 유무에 따라 둘 중에 어떤 메소드를 쓸지 고민하는 것
+
+    class FiresSausage extends Sausage {
+            taste(msg) {
+                // 오버로딩 테크닉. 전달인자에 따라 다른 결과를 처리하도록 만들어 줍니다.
+                if (msg) {
+                    console.log(
+                        `소세지에서 불맛이 어우러진 ${this.item1}와 ${this.item2}의 맛이 난다!! ${msg} 때문인것 같다!`
+                    );
+                } else {
+                    console.log(
+                        `소세지에서 불맛이 어우러진 ${this.item1}와 ${this.item2}의 맛이 난다!!`
+                    );
+                }
+            }
+        }
+
+        const firesSausage = new FiresSausage('파', '계란');
+
+
+    </script>
+
+</body>
+</html>

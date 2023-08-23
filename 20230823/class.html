@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    
+<body>
+    <script>
+        class Robot {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayYouName() {
+                console.log(`제이름은 ${this.myName} 입니다 삐리비리리비`);
+            }
+        }
+
+
+        // 생성자 함수를 class 문법으로 변경하기
+        class Me {
+            constructor(myAddress){
+                this.name = '재현';
+                this.address = myAddress;
+                this.phoneNum = '010-9000-0000';
+            }
+
+            canWalk() {
+                console.log('재현이가 걷는다.');
+            };
+
+            teaching(student) {
+                student.levelUp();
+            }
+        }
+
+        class Lion {
+            constructor() {
+                this.level = 1;
+            }
+
+            levelUp() {
+                this.level++;
+            }
+        }
+
+        // Me -> Lion -> Me -> const me = new Me('제주시 아라동');  ->  me(안에 추가되는 것을 확인), 프로토타입 확인하면 메소드 canWalk, teaching 있는 것을 확인
+
+        // const lion = new Lion -> lion.teaching();
+    </script>
+
+</body>
+</html>
