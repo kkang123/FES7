@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax 요청</title>
+
+</head>
+
+
+<body>
+    <!-- 출력받을 메세지 공간 -->
+    <p>some text</p>
+    <button>통신 시작!</button>
+
+    <script>
+        const btn = document.querySelector('button');
+        const txt = document.querySelector('p');
+        btn.addEventListener('click', xhrRequest);
+
+        function xhrRequest(){
+            // 생성자 함수로 객체 생성(비동기 통신을 할 수 있다.)
+            const xhrObj = new XMLHttpRequest();
+
+            // 채널 열기(,URL연결)
+            xhrObj.open('GET', 'message.txt')
+
+            // 프로퍼티는 함수를 실행
+            xhrObj.onreadystatechange = () => {
+                if(xhrObj.readyState === 4 && xhrObj.status === 200) {
+                    const result = xhrObj.responseText;
+                    txt.textContent = result;
+
+                }
+            };
+
+            // 데이터 보내주기
+            xhrObj.send();
+        }
+
+
+
+    </script>
+</body>
+</html>
