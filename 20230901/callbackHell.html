@@ -10,23 +10,40 @@
 
 <body>
     <script>
-        'use strict';
+        // XHR 객체 생성
+        'use strict'; // 엄격모드 // 최적화
 
         class UserStorage {
             // 사용자가 입력한 값과 유저 정보가 일치하는 유저를 찾습니다.
             searchUser(userName, password, onSuccess, onError) {
 
+                // requestObj 선언해주고 XMLHttpRequest는 서버가 비동기 통신 가능하게 해주는 js 객체
                 const requestObj = new XMLHttpRequest();
+
+                //  GET을 이용해서 URL(users.json)받아온다.
                 requestObj.open('GET', 'users.json'); // 요청 초기화
+
+                // readystate 가 변화하면 실행되는 이벤트리스너 입니다.
+                // readystate 0은 생성됐지만 초기화 안됐을 때 , 1은 오픈함수가 초기화 2send 함수, 3 데이터 다운, 4 통신완료
+                // 통신 완료됐다는 4번 받거나 서버 응답 상태가 성공적이면  200(상태값) 실행
+                // 그럼 출력한다.
                 requestObj.onreadystatechange = () => {
                     if (requestObj.readyState === 4 && requestObj.status === 200) {
                         const result = JSON.parse(requestObj.responseText).user.find((item) => {
                             return item.userName === userName && item.password === password
                         });
+                        // JSON.parse : json을 parse해서 객체로 만들어줌
+                        // stringify :객체를 json으로
+                        // item의 유저네임과 password가 입력받은 유저네임과 password 가 같은지 확인
+                        // return이 find 함수 안에 있는 return
+                        // JSON.을 parse를 해서 responseText가 서버에서 요청 받은 텍스트 users.json을 가져온다. users 안에 find를 해서 item이 userName과 같고 패쓰워드가 같은지
+
 
                         // 사용자가 입력한 정보와 일치하는 유저가 존재한다면 
                         if (result) {
                             onSuccess(userName);
+                            // 유저네임을 매개변수 받아서 일치할 때
+                            // greetings에 네임과 users 네임과 비교하기 위해
                             // 사용자가 입력한 정보와 일치하는 유저가 존재하지 않는다면
                         } else {
                             onError(new Error('user not found'));
@@ -37,6 +54,7 @@
             }
 
             // 유저에 맞는 인사말을 출력합니다.
+            // user가 userName
             sayHi(user, onSuccess, onError) {
                 const requestObj = new XMLHttpRequest();
                 requestObj.open('GET', 'greetings.json'); // 요청 초기화
@@ -45,6 +63,9 @@
                         const result = JSON.parse(requestObj.responseText).greetings.find((item) => {
                             return item.userName === user
                         });
+                        // greetings 안에 있는 아이템
+
+
 
                         // 사용자가 입력한 유저 이름과 일치하는 인사말이 존재한다면 
                         if (result) {
@@ -81,7 +102,7 @@
             (error) => {
                 console.log(error);
             }
-        );
+        ); // 콜백 지옥....
 
     </script>
 </body>

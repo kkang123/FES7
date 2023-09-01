@@ -11,6 +11,7 @@
 <body>
     <script>
 
+        // Promise가 약속 지켰을 때는 resolve 못 지켰을 때는 reject
         const orderCoffee = new Promise((resolve, reject) => {
             const requestObj = new XMLHttpRequest();
             requestObj.open('GET', 'orderCofee.txt');
