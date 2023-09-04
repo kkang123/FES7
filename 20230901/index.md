@@ -69,3 +69,17 @@ Async/Await와의 호환: fetch와 async/await는 함께 사용되어 비동기 
 이러한 제한사항 때문에 많은 개발자들이 axios와 같은 HTTP 클라이언트 라이브러리를 선호하기도 합니다. axios는 fetch에 없는 다양한 기능을 제공하며, 프라미스 기반으로 작동합니다.
 
 결론적으로, fetch는 여전히 널리 사용되고 있으나, 프로젝트의 요구사항과 개인의 취향에 따라 axios나 다른 HTTP 클라이언트 라이브러리를 사용할 수도 있습니다.
+
+
+fetch는 설탕 문법
+
+
+
+promise
+비동기적 상태인 코드를 상태를 확인하기 위해서
+resolved, fulfilled, rejected 상태가 있다.
+
+
+resolved는 통신이 안정적으로 실행했을 때
+
+reject는 통신을 실패 했을 때
