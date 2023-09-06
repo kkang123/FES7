@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+<!-- 지현님 코드 -->
+    <script type="text/babel">
+
+        const menuList = [ "링크1", "링크2", "링크3","링크4","링크5"];
+        const Header = () =>{
+            return <header>
+                <h1>hello world shop</h1>
+                {Nav(menuList)}
+            </header>
+        }
+
+        const Nav = (props)=>{
+            return<nav>
+                <ul>
+                    {
+                        menuList.map(list => {
+                            return <li><a href={`link${list}`}></a>{list}</li>
+                        })
+                    }
+                </ul>
+            </nav>
+        }
+
+        const Main = (productCount) => {
+            return <main>
+                    <h2>hello world!</h2>
+                    <p>product list</p>
+                    <ul>
+                        {Array(productCount).map((list, index) =>{
+                            return <li>best seller 옷{list = index+1}</li>
+                        })}
+                    </ul>
+                </main>
+        }
+
+        const Footer = () =>{
+            return<footer>
+                <h2>hello footer!</h2>
+                <address>제주시 인다 1길</address>
+            </footer>
+        }
+
+        const body = (
+            <div>
+                {Header()}
+                <Main />
+                {Footer()}
+            </div>
+        );
+
+        const domContainer = document.querySelector('#root');
+        const root = ReactDOM.createRoot(domContainer);
+
+        // 최종적으로 렌더링해준다.
+        root.render(body);
+
+    </script>
+        
+
+
+            
+
+</body>
+</html>
