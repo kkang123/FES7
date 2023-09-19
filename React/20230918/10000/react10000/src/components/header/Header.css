@@ -21,7 +21,7 @@ header {
     max-width: 225px;
     width: 100%;
     transform: translate(-50%, -50%);
-    background-image: url("../images/title_bg.png");
+    background-image: url("../../images/title_bg.png");
     background-position: center;
     background-size: contain;
     aspect-ratio: 1/1;
@@ -57,10 +57,10 @@ header {
 
 .txt-desc::before {
     left: 0;
-    background-image: url("../images/txt-left.png");
+    background-image: url("../../images/txt-left.png");
 }
 
 .txt-desc::after {
     right: 0;
-    background-image: url("../images/txt-right.png");
+    background-image: url("../../images/txt-right.png");
 }

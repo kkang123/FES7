@@ -37,7 +37,7 @@ main {
     height: 72px;
     right: -70px;
     bottom: -20px;
-    background-image: url("../images/hand.png");
+    background-image: url("../../images/hand.png");
 }
 
 .cont-result .txt-wannabe {

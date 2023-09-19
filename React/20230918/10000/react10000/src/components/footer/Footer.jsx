@@ -1,5 +1,5 @@
 import React from 'react'
-import footerImg from '../images/weniv.png'
+import footerImg from '../../images/weniv.png'
 import './Footer.css'
 
 export default function Footer() {
