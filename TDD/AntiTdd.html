@@ -28,16 +28,14 @@
     <article>
         <strong class="viewer"></strong>
         <input class="inp-txt" type="text">
+        <!-- 서로 다른 언어의 코드가 섞여있다. -->
         <button class="btn-push" onclick="push()">적용</button>
     </article>
 
-
     <script>
-        // 전역변수의 사용. 함수가 아니기 때문에 테스트 자체가 불가능하다.
-        const txt = "hello lions";
+        // 전역변수의 사용. 함수가 아니기 때문에 테스트 자체가 불가능합니다.
         const viewer = document.querySelector('.viewer');
-        viewer.textContent = txt;
-
+        viewer.textContent = "hello lions";
 
         // 재사용성이 떨어집니다.
         function push() {
@@ -45,7 +43,7 @@
             viewer.textContent = inpTxt.value;
         }
 
-        // 테스트가 가능하려면?
+        // 테스트가 가능하려면!
         /**
          * 1. 테스트 대상이 UI에서 완전히 분리되어야합니다.
          * 2. 모든 기능은 함수로 구현해야합니다.
